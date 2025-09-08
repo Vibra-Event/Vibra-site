@@ -1,27 +1,23 @@
-/* ---- Base ---- */
 :root{
   --neon: #a020f0;      /* violet néon */
-  --neon-glow1: #ff00ff;
-  --bg-top: #000000;    /* noir bandeau */
-  --bg-body1: #000000;
-  --bg-body2: #1a001a;
+  --neon-glow: #ff00ff;
+  --black: #000000;
+  --bg1: #000000;
+  --bg2: #1a001a;
   --text: #ffffff;
 }
 
-* { box-sizing: border-box; }
-html, body { margin: 0; padding: 0; }
-
 body {
+  margin: 0;
   font-family: Arial, Helvetica, sans-serif;
-  background: linear-gradient(to bottom, var(--bg-body1), var(--bg-body2));
+  background: linear-gradient(to bottom, var(--bg1), var(--bg2));
   color: var(--text);
   text-align: center;
 }
 
-/* ---- Header noir ---- */
+/* ---- Header ---- */
 .site-header {
-  background: var(--bg-top);
-  border-bottom: 1px solid rgba(255,255,255,0.08);
+  background: var(--black);
 }
 
 .header-inner{
@@ -34,33 +30,87 @@ body {
 }
 
 .logo{
-  width: 64px;       /* ajuste ici si tu veux plus petit/grand */
+  width: 64px;
   height: auto;
-  display: block;
 }
 
-/* ---- Navigation néon ---- */
+/* ---- Navigation ---- */
 .main-nav a{
   color: var(--neon);
   margin-left: 18px;
   text-decoration: none;
-  font-weight: 700;
+  font-weight: bold;
   font-size: 18px;
-  text-shadow: 0 0 8px var(--neon-glow1), 0 0 14px var(--neon);
-  transition: opacity .25s ease;
+  text-shadow: 0 0 8px var(--neon-glow), 0 0 14px var(--neon);
+  transition: opacity .25s;
 }
-.main-nav a:hover{ opacity: .75; }
+.main-nav a:hover{ opacity: .7; }
 
-/* ---- Hero : VIBRA.png pleine largeur, sans recadrage ---- */
+/* ---- Hero ---- */
 .hero {
-  background: var(--bg-top); /* garde un fond noir derrière au cas où */
+  position: relative;
 }
 .hero-img{
-  width: 100%;   /* prend toute la largeur visible */
-  height: auto;  /* conserve l'aspect, pas de crop */
+  width: 100%;   /* pleine largeur */
+  height: auto;  /* garde proportions */
   display: block;
 }
+.slogan{
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 32px;
+  color: var(--neon);
+  text-shadow: 0 0 10px var(--neon-glow), 0 0 18px var(--neon);
+  margin: 0;
+}
 
-/* 💡 Si tu veux la “taille réelle” exacte (sans adapter à l’écran),
-   commente la ligne width:100% au-dessus et utilise ceci à la place :
-   .hero-img { width: auto; max-width: no
+/* ---- Services ---- */
+section { padding: 40px 20px; }
+
+.service{
+  border: 2px solid var(--neon);
+  background: #140015;
+  padding: 20px;
+  margin: 15px auto;
+  max-width: 480px;
+  border-radius: 12px;
+  text-shadow: 0 0 6px var(--neon);
+  transition: transform .3s, box-shadow .3s;
+}
+.service:hover{
+  transform: translateY(-5px);
+  box-shadow: 0 8px 22px rgba(160,32,240,.6);
+}
+
+/* ---- Formulaire ---- */
+button{
+  background: var(--neon);
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  text-shadow: 0 0 6px var(--neon-glow);
+}
+button:hover{ filter: brightness(1.1); }
+
+input, textarea{
+  width: 80%;
+  padding: 10px;
+  margin: 6px 0;
+  border-radius: 6px;
+  border: 1px solid #4a4a4a;
+  background: #0f0b12;
+  color: #fff;
+}
+
+/* ---- Footer ---- */
+footer{
+  background: var(--black);
+  color: var(--neon);
+  text-shadow: 0 0 6px var(--neon-glow);
+  padding: 16px;
+}
