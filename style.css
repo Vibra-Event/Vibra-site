@@ -102,3 +102,26 @@ footer {
   padding: 20px;
   font-size: 0.9em;
 }
+/* --- EXISTANT STYLE.CSS --- */
+
+/* ... ton code déjà présent ... */
+
+/* Effet pulse néon pour bienvenue et menu */
+.bienvenue-text, .main-nav a {
+  animation: neonPulse 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes neonPulse {
+  0% {
+    text-shadow: 0 0 5px #9b00ff, 0 0 15px #ff00ff;
+    color: #9b00ff;
+  }
+  50% {
+    text-shadow: 0 0 10px #9b00ff, 0 0 25px #ff00ff;
+    color: #d100ff;
+  }
+  100% {
+    text-shadow: 0 0 5px #9b00ff, 0 0 15px #ff00ff;
+    color: #9b00ff;
+  }
+}
