@@ -11,29 +11,24 @@ body {
 /* En-tête */
 header {
   background: #000; /* Bande noire */
-  padding: 0;
-  position: relative;
+  height: 250px; /* hauteur du bandeau */
+  background-image: url("VIBRA.png"); /* ton image */
+  background-size: cover;  /* étire l’image sur toute la largeur */
+  background-position: center; /* centre l’image */
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding: 20px;
 }
 
-.banniere {
-  width: 100%;   /* occupe toute la largeur */
-  height: auto;  /* garde les proportions */
-  display: block;
-}
-
-nav {
-  position: absolute;
-  top: 10px;
-  right: 20px;
-}
-
+/* Navigation */
 nav a {
   color: #a020f0; /* Violet néon */
   margin: 0 15px;
   text-decoration: none;
   font-weight: bold;
   font-size: 18px;
-  text-shadow: 0 0 8px #ff00ff, 0 0 15px #a020f0; /* effet néon */
+  text-shadow: 0 0 8px #ff00ff, 0 0 15px #a020f0;
   transition: color 0.3s;
 }
 
@@ -45,7 +40,7 @@ nav a:hover {
 #accueil h2 {
   font-size: 28px;
   color: #a020f0;
-  text-shadow: 0 0 8px #ff00ff, 0 0 15px #a020f0; /* effet néon */
+  text-shadow: 0 0 8px #ff00ff, 0 0 15px #a020f0;
   margin-top: 20px;
 }
 
@@ -58,57 +53,4 @@ nav a:hover {
 
 .vibra-img:hover {
   transform: scale(1.05);
-}
-
-/* Services */
-.service {
-  border: 2px solid #a020f0;
-  padding: 20px;
-  margin: 15px auto;
-  max-width: 400px;
-  border-radius: 10px;
-  background: #1a001a;
-  color: white;
-  text-shadow: 0 0 6px #a020f0;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.service:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 5px 15px rgba(160, 32, 240, 0.8);
-}
-
-/* Formulaire */
-button {
-  background: #a020f0;
-  color: white;
-  border: none;
-  padding: 12px 20px;
-  border-radius: 8px;
-  font-size: 16px;
-  cursor: pointer;
-  margin-top: 15px;
-  text-shadow: 0 0 6px #ff00ff;
-  transition: background 0.2s;
-}
-
-button:hover {
-  background: #7a1bb5;
-}
-
-input, textarea {
-  width: 80%;
-  padding: 10px;
-  margin: 5px 0;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-}
-
-/* Pied de page */
-footer {
-  text-align: center;
-  padding: 15px;
-  background: #000;
-  color: #a020f0;
-  text-shadow: 0 0 6px #ff00ff;
 }
