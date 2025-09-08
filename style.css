@@ -7,13 +7,46 @@ body {
   text-align: center;
 }
 
-/* Bandeau logo */
-header {
+/* Header avec logo, texte bienvenue à gauche et menu à droite */
+.header-top {
   background: black;
-  padding: 10px;
+  padding: 10px 20px;
+}
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Logo et bienvenue */
+.logo-bienvenue {
+  display: flex;
+  align-items: center;
 }
 .logo {
   max-height: 80px;
+}
+.bienvenue-text {
+  margin-left: 10px;
+  font-size: 1.5em;
+  color: #9b00ff;
+  font-weight: bold;
+  text-shadow: 0 0 5px #9b00ff, 0 0 10px #ff00ff;
+}
+
+/* Menu dans le header */
+.main-nav a {
+  margin-left: 20px;
+  color: #9b00ff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2em;
+  text-shadow: 0 0 5px #9b00ff, 0 0 10px #ff00ff;
+}
+.main-nav a:hover {
+  color: #ff00ff;
 }
 
 /* Image VIBRA */
@@ -46,25 +79,6 @@ header {
 @keyframes scroll {
   0%   { transform: translateX(0); }
   100% { transform: translateX(-100%); }
-}
-
-/* Menu sous bandeau défilant */
-.menu {
-  background: #111;
-  padding: 15px;
-}
-
-.menu a {
-  margin: 0 15px;
-  color: #9b00ff;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 1.2em;
-  text-shadow: 0 0 5px #9b00ff, 0 0 10px #ff00ff;
-}
-
-.menu a:hover {
-  color: #ff00ff;
 }
 
 /* Sections */
