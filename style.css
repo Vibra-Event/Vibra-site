@@ -6,10 +6,14 @@ body {
   color: white;
 }
 
-/* Header avec logo + bienvenue à gauche, menu à droite */
+/* Header */
 .header-top {
   background: black;
   padding: 10px 20px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
 }
 .header-inner {
   display: flex;
@@ -19,7 +23,7 @@ body {
   margin: 0 auto;
 }
 
-/* Logo + Bienvenue */
+/* Logo et Bienvenue */
 .logo-bienvenue {
   display: flex;
   align-items: center;
@@ -35,7 +39,7 @@ body {
   text-shadow: 0 0 5px #9b00ff, 0 0 10px #ff00ff;
 }
 
-/* Menu à droite avec effet néon */
+/* Menu à droite avec néon */
 .main-nav a {
   margin-left: 20px;
   color: #9b00ff;
@@ -52,10 +56,10 @@ body {
 .vibra-img {
   width: 100%;
   display: block;
-  margin: 0 auto;
+  margin-top: 110px; /* pour ne pas cacher derrière header fixe */
 }
 
-/* Bandeau défilant continu */
+/* Bandeau défilant */
 .bandeau-defile {
   width: 100%;
   background: black;
