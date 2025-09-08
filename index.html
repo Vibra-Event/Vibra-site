@@ -1,24 +1,36 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Vibra - Soirées et Goodies</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-  <header>
-    <nav>
-      <a href="#evenements">Événements</a>
-      <a href="#packs">Packs soirée</a>
-      <a href="#goodies">Goodies</a>
-      <a href="#contact">Contact</a>
-    </nav>
+
+  <!-- BANDEAU NOIR AVEC LOGO -->
+  <header class="site-header">
+    <div class="header-inner">
+      <!-- Utilise exactement le nom de ton fichier logo -->
+      <img src="Logo-Vibra.jpg" alt="Logo Vibra" class="logo"/>
+      <nav class="main-nav">
+        <a href="#evenements">Événements</a>
+        <a href="#packs">Packs soirée</a>
+        <a href="#goodies">Goodies</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
   </header>
 
-  <section id="accueil">
+  <!-- IMAGE VIBRA EN PLEINE LARGEUR -->
+  <section class="hero">
+    <!-- VIBRA.png s'étire sur toute la largeur, hauteur auto (pas de recadrage) -->
+    <img src="VIBRA.png" alt="Bannière VIBRA" class="hero-img"/>
+  </section>
+
+  <section id="accueil" class="accueil">
     <h2>Vibra fond tes soirées</h2>
-    <img src="accueil.png" alt="Image Vibra" class="vibra-img">
+    <img src="accueil.png" alt="Image Vibra" class="vibra-img"/>
   </section>
 
   <section id="evenements">
@@ -49,5 +61,6 @@
   <footer>
     &copy; 2025 Vibra - Tous droits réservés
   </footer>
+
 </body>
 </html>
