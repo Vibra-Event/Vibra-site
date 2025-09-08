@@ -3,44 +3,50 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background: linear-gradient(to bottom, #fffae3, #ffe3f2);
+  background: linear-gradient(to bottom, #000000, #1a001a);
   text-align: center;
-}
-
-/* Header */
-header {
-  background: #ff3c3c;
   color: white;
-  padding: 20px;
 }
 
-.logo {
-  width: 60px;  /* taille du logo ajustée */
-  vertical-align: middle;
-  margin-right: 10px;
+/* En-tête */
+header {
+  background: #000; /* Bande noire */
+  padding: 0;
+  position: relative;
 }
 
+.banniere {
+  width: 100%;   /* occupe toute la largeur */
+  height: auto;  /* garde les proportions */
+  display: block;
+}
 
-header h1 {
-  display: inline-block;
-  vertical-align: middle;
+nav {
+  position: absolute;
+  top: 10px;
+  right: 20px;
 }
 
 nav a {
-  color: white;
+  color: #a020f0; /* Violet néon */
   margin: 0 15px;
   text-decoration: none;
   font-weight: bold;
+  font-size: 18px;
+  text-shadow: 0 0 8px #ff00ff, 0 0 15px #a020f0; /* effet néon */
   transition: color 0.3s;
 }
 
 nav a:hover {
-  color: #ffd700;
+  color: #ff00ff;
 }
 
-/* Sections */
-section {
-  padding: 40px 20px;
+/* Section accueil */
+#accueil h2 {
+  font-size: 28px;
+  color: #a020f0;
+  text-shadow: 0 0 8px #ff00ff, 0 0 15px #a020f0; /* effet néon */
+  margin-top: 20px;
 }
 
 .vibra-img {
@@ -54,24 +60,27 @@ section {
   transform: scale(1.05);
 }
 
+/* Services */
 .service {
-  border: 2px solid #ff3c3c;
+  border: 2px solid #a020f0;
   padding: 20px;
   margin: 15px auto;
   max-width: 400px;
   border-radius: 10px;
-  background: #fff0f5;
+  background: #1a001a;
+  color: white;
+  text-shadow: 0 0 6px #a020f0;
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .service:hover {
   transform: translateY(-5px);
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  box-shadow: 0 5px 15px rgba(160, 32, 240, 0.8);
 }
 
 /* Formulaire */
 button {
-  background: #ff3c3c;
+  background: #a020f0;
   color: white;
   border: none;
   padding: 12px 20px;
@@ -79,11 +88,12 @@ button {
   font-size: 16px;
   cursor: pointer;
   margin-top: 15px;
+  text-shadow: 0 0 6px #ff00ff;
   transition: background 0.2s;
 }
 
 button:hover {
-  background: #d12b2b;
+  background: #7a1bb5;
 }
 
 input, textarea {
@@ -94,10 +104,11 @@ input, textarea {
   border: 1px solid #ccc;
 }
 
-/* Footer */
+/* Pied de page */
 footer {
   text-align: center;
   padding: 15px;
-  background: #222;
-  color: white;
+  background: #000;
+  color: #a020f0;
+  text-shadow: 0 0 6px #ff00ff;
 }
