@@ -1,47 +1,53 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Vibra - Soirées et Goodies</title>
-  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-  <!-- BANDEAU NOIR AVEC LOGO -->
-  <header class="site-header">
-    <div class="header-inner">
-      <img src="Logo.png" alt="Logo Vibra" class="logo"/>
-      <nav class="main-nav">
-        <a href="#evenements">Événements</a>
-        <a href="#packs">Packs soirée</a>
-        <a href="#goodies">Goodies</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
+  <!-- Bandeau noir avec logo -->
+  <header>
+    <img src="Logo.png" alt="Logo Vibra" class="logo">
   </header>
 
-  <!-- IMAGE VIBRA EN PLEINE LARGEUR -->
-  <section class="hero">
-    <img src="VIBRA.png" alt="Bannière VIBRA" class="hero-img"/>
-    <h2 class="slogan">Vibra fond tes soirées</h2>
+  <!-- Phrase qui défile -->
+  <section id="accueil">
+    <div class="marquee">
+      <span>
+        Vibra fond tes soirées ✨ Vibra fond tes soirées ✨ Vibra fond tes soirées ✨ Vibra fond tes soirées ✨ Vibra fond tes soirées ✨
+      </span>
+    </div>
+
+    <!-- Menu sous la phrase -->
+    <nav class="menu">
+      <a href="#evenements">Événements</a>
+      <a href="#packs">Packs soirée</a>
+      <a href="#goodies">Goodies</a>
+    </nav>
+
+    <!-- Grande image VIBRA -->
+    <img src="VIBRA.png" alt="Image Vibra" class="vibra-img">
   </section>
 
+  <!-- Sections -->
   <section id="evenements">
     <h2>Événements</h2>
-    <div class="service">Soirées à thème, anniversaires, fêtes privées et plus encore !</div>
+    <p>Soirées à thème, anniversaires, fêtes privées et plus encore !</p>
   </section>
 
   <section id="packs">
     <h2>Packs soirée</h2>
-    <div class="service">Choisissez votre pack pour une soirée clé en main.</div>
+    <p>Choisissez votre pack pour une soirée clé en main.</p>
   </section>
 
   <section id="goodies">
     <h2>Goodies</h2>
-    <div class="service">Badges, bracelets et accessoires pour mettre de l'ambiance !</div>
+    <p>Badges, bracelets, accessoires pour mettre de l'ambiance !</p>
   </section>
 
+  <!-- Contact -->
   <section id="contact">
     <h2>Contact / Réservation</h2>
     <form action="mailto:tonemail@example.com" method="post" enctype="text/plain">
@@ -55,6 +61,5 @@
   <footer>
     &copy; 2025 Vibra - Tous droits réservés
   </footer>
-
 </body>
 </html>
