@@ -15,10 +15,13 @@ header {
 }
 
 .logo {
-  width: 50px;  /* taille intermédiaire, visible et bien proportionnée */
+  width: 80px;
+  height: 80px;  /* forcer hauteur carrée */
+  object-fit: contain; /* garde les proportions */
   vertical-align: middle;
   margin-right: 10px;
 }
+
 
 header h1 {
   display: inline-block;
