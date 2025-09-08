@@ -15,9 +15,7 @@ header {
 }
 
 .logo {
-  width: 80px;
-  height: 80px;  /* forcer hauteur carrée */
-  object-fit: contain; /* garde les proportions */
+  width: 60px;  /* taille du logo ajustée */
   vertical-align: middle;
   margin-right: 10px;
 }
