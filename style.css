@@ -6,7 +6,7 @@ body {
   color: white;
 }
 
-/* HEADER */
+/* HEADER FIXE */
 .header-top {
   background-color: black;
   width: 100%;
@@ -33,32 +33,62 @@ body {
 .logo {
   max-height: 80px;
 }
+
+/* Bienvenue en vague et néon */
 .bienvenue-text {
+  display: flex;
   margin-left: 10px;
+}
+.bienvenue-text span {
+  display: inline-block;
   font-size: 1.5em;
   font-weight: bold;
   color: #9b00ff;
   text-shadow: 0 0 5px #9b00ff, 0 0 15px #ff00ff;
+  animation: wave 1.5s infinite ease-in-out;
 }
 
-/* Menu à droite */
+/* Décalage pour effet vague */
+.bienvenue-text span:nth-child(1) { animation-delay: 0s; }
+.bienvenue-text span:nth-child(2) { animation-delay: 0.1s; }
+.bienvenue-text span:nth-child(3) { animation-delay: 0.2s; }
+.bienvenue-text span:nth-child(4) { animation-delay: 0.3s; }
+.bienvenue-text span:nth-child(5) { animation-delay: 0.4s; }
+.bienvenue-text span:nth-child(6) { animation-delay: 0.5s; }
+.bienvenue-text span:nth-child(7) { animation-delay: 0.6s; }
+.bienvenue-text span:nth-child(8) { animation-delay: 0.7s; }
+.bienvenue-text span:nth-child(9) { animation-delay: 0.8s; }
+
+@keyframes wave {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* Menu à droite en néon pulse */
 .main-nav a {
   margin-left: 25px;
-  color: #9b00ff;
   font-size: 1.2em;
   font-weight: bold;
+  color: #9b00ff;
   text-decoration: none;
   text-shadow: 0 0 5px #9b00ff, 0 0 15px #ff00ff;
+  animation: neonPulse 1.5s ease-in-out infinite alternate;
 }
 .main-nav a:hover {
   color: #ff00ff;
+}
+
+@keyframes neonPulse {
+  0% { text-shadow: 0 0 5px #9b00ff, 0 0 15px #ff00ff; color: #9b00ff; }
+  50% { text-shadow: 0 0 10px #9b00ff, 0 0 25px #ff00ff; color: #d100ff; }
+  100% { text-shadow: 0 0 5px #9b00ff, 0 0 15px #ff00ff; color: #9b00ff; }
 }
 
 /* Image VIBRA */
 .vibra-img {
   width: 100%;
   display: block;
-  margin-top: 120px; /* Pour que l'image ne soit pas cachée derrière le header */
+  margin-top: 120px; /* pour ne pas cacher derrière header fixe */
 }
 
 /* BANDEAU DÉFILANT */
@@ -101,59 +131,4 @@ footer {
   background-color: black;
   padding: 20px;
   font-size: 0.9em;
-}
-/* --- EXISTANT STYLE.CSS --- */
-
-/* ... ton code déjà présent ... */
-
-/* Effet pulse néon pour bienvenue et menu */
-.bienvenue-text, .main-nav a {
-  animation: neonPulse 1.5s ease-in-out infinite alternate;
-}
-
-@keyframes neonPulse {
-  0% {
-    text-shadow: 0 0 5px #9b00ff, 0 0 15px #ff00ff;
-    color: #9b00ff;
-  }
-  50% {
-    text-shadow: 0 0 10px #9b00ff, 0 0 25px #ff00ff;
-    color: #d100ff;
-  }
-  100% {
-    text-shadow: 0 0 5px #9b00ff, 0 0 15px #ff00ff;
-    color: #9b00ff;
-  }
-}
-/* Bienvenue style néon déjà existant */
-.bienvenue-text {
-  display: flex;
-  margin-left: 10px;
-}
-
-/* Chaque lettre de bienvenue */
-.bienvenue-text span {
-  display: inline-block;
-  font-size: 1.5em;
-  font-weight: bold;
-  color: #9b00ff;
-  text-shadow: 0 0 5px #9b00ff, 0 0 15px #ff00ff;
-  animation: wave 1.5s infinite ease-in-out;
-}
-
-/* Animation vague : on décale chaque lettre avec un delay */
-.bienvenue-text span:nth-child(1) { animation-delay: 0s; }
-.bienvenue-text span:nth-child(2) { animation-delay: 0.1s; }
-.bienvenue-text span:nth-child(3) { animation-delay: 0.2s; }
-.bienvenue-text span:nth-child(4) { animation-delay: 0.3s; }
-.bienvenue-text span:nth-child(5) { animation-delay: 0.4s; }
-.bienvenue-text span:nth-child(6) { animation-delay: 0.5s; }
-.bienvenue-text span:nth-child(7) { animation-delay: 0.6s; }
-.bienvenue-text span:nth-child(8) { animation-delay: 0.7s; }
-.bienvenue-text span:nth-child(9) { animation-delay: 0.8s; }
-
-/* Animation vague verticale */
-@keyframes wave {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
 }
