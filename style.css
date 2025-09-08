@@ -15,7 +15,7 @@ header {
 }
 
 .logo {
-  width: 80px;  /* logo réduit */
+  width: 60px;  /* taille intermédiaire, visible et bien proportionnée */
   vertical-align: middle;
   margin-right: 10px;
 }
