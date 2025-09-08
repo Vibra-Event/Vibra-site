@@ -1,3 +1,4 @@
+/* Général */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -6,10 +7,22 @@ body {
   text-align: center;
 }
 
+/* Header */
 header {
   background: #ff3c3c;
   color: white;
   padding: 20px;
+}
+
+.logo {
+  width: 80px;  /* taille du logo */
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+header h1 {
+  display: inline-block;
+  vertical-align: middle;
 }
 
 nav a {
@@ -24,6 +37,7 @@ nav a:hover {
   color: #ffd700;
 }
 
+/* Sections */
 section {
   padding: 40px 20px;
 }
@@ -54,6 +68,7 @@ section {
   box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
+/* Formulaire */
 button {
   background: #ff3c3c;
   color: white;
@@ -78,6 +93,7 @@ input, textarea {
   border: 1px solid #ccc;
 }
 
+/* Footer */
 footer {
   text-align: center;
   padding: 15px;
