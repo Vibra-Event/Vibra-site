@@ -2,12 +2,12 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background: #f8f8f8;
+  background: linear-gradient(to bottom, #fffae3, #ffe3f2);
   text-align: center;
 }
 
 header {
-  background: #1a1a1a;
+  background: #ff3c3c;
   color: white;
   padding: 20px;
 }
@@ -17,10 +17,11 @@ nav a {
   margin: 0 15px;
   text-decoration: none;
   font-weight: bold;
+  transition: color 0.3s;
 }
 
 nav a:hover {
-  text-decoration: underline;
+  color: #ffd700;
 }
 
 section {
@@ -31,29 +32,50 @@ section {
   width: 300px;
   border-radius: 10px;
   margin-top: 20px;
+  transition: transform 0.3s;
+}
+
+.vibra-img:hover {
+  transform: scale(1.05);
 }
 
 .service {
-  border: 1px solid #ccc;
+  border: 2px solid #ff3c3c;
   padding: 20px;
   margin: 15px auto;
   max-width: 400px;
   border-radius: 10px;
-  background: white;
+  background: #fff0f5;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.btn {
-  display: inline-block;
-  margin-top: 10px;
-  padding: 10px 20px;
+.service:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+button {
   background: #ff3c3c;
   color: white;
-  text-decoration: none;
-  border-radius: 5px;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: background 0.2s;
 }
 
-.btn:hover {
+button:hover {
   background: #d12b2b;
+}
+
+input, textarea {
+  width: 80%;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
 }
 
 footer {
