@@ -1,116 +1,79 @@
-:root{
-  --neon: #a020f0;      /* violet néon */
-  --neon-glow: #ff00ff;
-  --black: #000000;
-  --bg1: #000000;
-  --bg2: #1a001a;
-  --text: #ffffff;
-}
-
+/* Style global */
 body {
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  background: linear-gradient(to bottom, var(--bg1), var(--bg2));
-  color: var(--text);
+  font-family: Arial, sans-serif;
+  background: #111;
+  color: white;
   text-align: center;
 }
 
-/* ---- Header ---- */
-.site-header {
-  background: var(--black);
+/* Bandeau noir avec logo */
+header {
+  background: black;
+  padding: 10px;
+}
+.logo {
+  max-height: 80px;
 }
 
-.header-inner{
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 12px 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+/* Phrase défilante */
+.marquee {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  background: black;
+  padding: 10px 0;
+}
+.marquee span {
+  display: inline-block;
+  padding-left: 100%;
+  animation: scroll 15s linear infinite;
+  font-size: 2em;
+  font-weight: bold;
+  color: #9b00ff;
+  text-shadow: 0 0 5px #9b00ff, 0 0 10px #ff00ff;
+}
+@keyframes scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
 }
 
-.logo{
-  width: 64px;
-  height: auto;
+/* Menu sous la phrase */
+.menu {
+  background: #111;
+  padding: 15px;
 }
-
-/* ---- Navigation ---- */
-.main-nav a{
-  color: var(--neon);
-  margin-left: 18px;
+.menu a {
+  margin: 0 15px;
+  color: #9b00ff;
   text-decoration: none;
   font-weight: bold;
-  font-size: 18px;
-  text-shadow: 0 0 8px var(--neon-glow), 0 0 14px var(--neon);
-  transition: opacity .25s;
+  font-size: 1.2em;
+  text-shadow: 0 0 5px #9b00ff, 0 0 10px #ff00ff;
 }
-.main-nav a:hover{ opacity: .7; }
+.menu a:hover {
+  color: #ff00ff;
+}
 
-/* ---- Hero ---- */
-.hero {
-  position: relative;
-}
-.hero-img{
-  width: 100%;   /* pleine largeur */
-  height: auto;  /* garde proportions */
+/* Image principale VIBRA */
+.vibra-img {
+  width: 100%;
   display: block;
-}
-.slogan{
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 32px;
-  color: var(--neon);
-  text-shadow: 0 0 10px var(--neon-glow), 0 0 18px var(--neon);
-  margin: 0;
+  margin: 0 auto;
 }
 
-/* ---- Services ---- */
-section { padding: 40px 20px; }
+/* Sections */
+section {
+  padding: 50px 20px;
+}
+h2 {
+  color: #9b00ff;
+  text-shadow: 0 0 5px #9b00ff, 0 0 10px #ff00ff;
+}
 
-.service{
-  border: 2px solid var(--neon);
-  background: #140015;
+/* Footer */
+footer {
+  background: black;
   padding: 20px;
-  margin: 15px auto;
-  max-width: 480px;
-  border-radius: 12px;
-  text-shadow: 0 0 6px var(--neon);
-  transition: transform .3s, box-shadow .3s;
-}
-.service:hover{
-  transform: translateY(-5px);
-  box-shadow: 0 8px 22px rgba(160,32,240,.6);
-}
-
-/* ---- Formulaire ---- */
-button{
-  background: var(--neon);
-  color: #fff;
-  border: none;
-  padding: 12px 20px;
-  border-radius: 8px;
-  font-size: 16px;
-  cursor: pointer;
-  text-shadow: 0 0 6px var(--neon-glow);
-}
-button:hover{ filter: brightness(1.1); }
-
-input, textarea{
-  width: 80%;
-  padding: 10px;
-  margin: 6px 0;
-  border-radius: 6px;
-  border: 1px solid #4a4a4a;
-  background: #0f0b12;
-  color: #fff;
-}
-
-/* ---- Footer ---- */
-footer{
-  background: var(--black);
-  color: var(--neon);
-  text-shadow: 0 0 6px var(--neon-glow);
-  padding: 16px;
+  font-size: 0.9em;
 }
