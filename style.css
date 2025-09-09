@@ -28,16 +28,17 @@ header {
   justify-content: space-between;
   padding: 10px 20px;
   background: #111;
-  position: relative;
-  z-index: 10;
 }
 
-header .logo {
-  font-size: 24px;
-  font-weight: bold;
-  color: #ff0080;
+.logo-container {
+  flex-shrink: 0;
 }
 
+.logo-img {
+  height: 50px; /* ajuste selon ton logo */
+}
+
+/* ==== NAVIGATION ==== */
 header nav a {
   margin-left: 20px;
   font-weight: bold;
