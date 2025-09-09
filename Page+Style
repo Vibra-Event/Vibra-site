@@ -7,7 +7,6 @@ VibraSite/
 ├─ style.css
 ├─ Logo.png
 ├─ VIBRA.png
-└─ videos/
-    ├─ Beerpong.mp4
-    ├─ Soiree.mp4
-    └─ Goodies.mp4
+├─ beerpong.mp4
+├─ Soiree.mp4
+└─ goodies.mp4
