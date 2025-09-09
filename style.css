@@ -1,8 +1,6 @@
-/* ===========================
-   STYLE GLOBAL - VIBRA
-=========================== */
+/* STYLE GLOBAL - VIBRA */
 
-/* ==== RESET & BASE ==== */
+/* RESET & BASE */
 * {
   margin: 0;
   padding: 0;
@@ -21,6 +19,7 @@ a {
   color: inherit;
 }
 
+/* HEADER */
 header {
   display: flex;
   align-items: center;
@@ -37,9 +36,7 @@ header {
   height: 50px; /* ajuste selon ton logo */
 }
 
-}
-
-/* ==== NAVIGATION ==== */
+/* NAVIGATION */
 header nav a {
   margin-left: 20px;
   font-weight: bold;
@@ -51,7 +48,7 @@ header nav a:hover {
   color: #ff0080;
 }
 
-/* ==== BANDE QUI DÉFILE ==== */
+/* BANDE QUI DÉFILE */
 .marquee-container {
   width: 100%;
   overflow: hidden;
@@ -74,13 +71,7 @@ header nav a:hover {
   100% { transform: translateX(-100%); }
 }
 
-/* ==== SECTIONS ==== */
-section {
-  padding: 60px 20px;
-  text-align: center;
-}
-
-/* ==== BIENVENUE ==== */
+/* SECTION BIENVENUE */
 .welcome-section {
   display: flex;
   flex-direction: column;
@@ -110,7 +101,7 @@ section {
   100% { transform: translateY(0); opacity: 1; }
 }
 
-/* ==== BOUTONS ==== */
+/* BOUTON */
 .btn {
   padding: 12px 30px;
   font-size: 18px;
@@ -127,42 +118,7 @@ section {
   background: #ff3399;
 }
 
-/* ==== SECTIONS GOODIES / ÉVÉNEMENTS / BEERPONG ==== */
-.card {
-  background: #111;
-  border: 2px solid #ff0080;
-  border-radius: 15px;
-  padding: 20px;
-  margin: 20px auto;
-  max-width: 400px;
-  transition: 0.3s;
-}
-
-.card:hover {
-  transform: scale(1.05);
-  border-color: #ff3399;
-}
-
-.card h2 {
-  color: #ff0080;
-  margin-bottom: 10px;
-}
-
-.card p {
-  color: #fff;
-  font-size: 16px;
-}
-
-/* ==== FOOTER ==== */
-footer {
-  background: #111;
-  text-align: center;
-  padding: 20px;
-  font-size: 14px;
-  border-top: 2px solid #ff0080;
-}
-
-/* ==== MEDIA QUERIES ==== */
+/* MEDIA QUERIES */
 @media screen and (max-width: 768px) {
   header nav a {
     margin-left: 10px;
