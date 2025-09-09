@@ -3,218 +3,129 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vibra - Beer Pong & Soirées</title>
+  <title>Vibra - Beer Pong</title>
   <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    body {
-      margin:0;
-      font-family: 'Roboto', sans-serif;
-      background-color:#0f0f0f;
-      color:#fff;
-    }
-
-    /* Headboard */
+    body { margin:0; font-family:'Roboto',sans-serif; background:#0f0f0f; color:#fff; }
     header {
-      background: #111;
-      padding: 20px 40px;
-      display:flex;
-      justify-content: space-between;
-      align-items: center;
-      box-shadow: 0 2px 10px rgba(255,0,255,0.2);
+      background:#111; padding:20px 40px; display:flex; justify-content:space-between; align-items:center; box-shadow:0 2px 10px rgba(255,0,255,0.2);
     }
-    .logo-container {
-      display:flex;
-      align-items:center;
-      gap:10px;
-    }
+    .logo-container { display:flex; align-items:center; gap:10px; }
     .logo-container img.logo { height:50px; }
+
+    /* MENU NEON */
     nav a {
-      color:#fff;
-      margin-left:20px;
-      text-decoration:none;
-      font-weight:bold;
-      transition: color 0.3s;
+      color:#fff; margin-left:20px; text-decoration:none; font-weight:bold; padding:8px 15px; border: 2px solid #a64ca6; border-radius:8px; transition:0.3s;
+      text-shadow:0 0 5px #a64ca6,0 0 10px #a64ca6,0 0 20px #ff66cc;
     }
-    nav a:hover { color:#ff66cc; }
+    nav a:hover {
+      color:#ff66cc; box-shadow:0 0 10px #ff66cc,0 0 20px #a64ca6; border-color:#ff66cc;
+    }
 
     /* Bandeau défilant */
-    .scrolling-banner {
-      background: #222;
-      color:#fff;
-      overflow:hidden;
-      white-space: nowrap;
-      box-shadow: 0 2px 10px rgba(255,0,255,0.2);
-      padding:10px 0;
-    }
-    .scrolling-banner span {
-      display:inline-block;
-      padding-left:100%;
-      animation: scroll 20s linear infinite;
-    }
+    .scrolling-banner { background:#222; color:#fff; overflow:hidden; white-space:nowrap; box-shadow:0 2px 10px rgba(255,0,255,0.2); padding:10px 0; }
+    .scrolling-banner span { display:inline-block; padding-left:100%; animation: scroll 20s linear infinite; }
     @keyframes scroll { 0% { transform: translateX(0%);} 100% { transform: translateX(-100%);} }
 
-    /* Description Services */
-    .page-description {
-      text-align:center;
-      padding:40px 20px;
-      font-size:1.2em;
-      max-width:900px;
-      margin:0 auto 50px auto;
-      color:#fff;
-    }
+    /* Description */
+    .page-description { text-align:center; padding:40px 20px; font-size:1.2em; max-width:900px; margin:0 auto 50px auto; color:#fff; }
 
-    /* Section Beer Pong */
+    /* Packs Beer Pong */
     #beerpong { padding:60px 20px; text-align:center; }
-    #beerpong h2 {
-      font-size:3em;
-      color:#ff66cc;
-      text-shadow: 0 0 5px rgba(255,102,204,0.5);
-      margin-bottom:10px;
-      font-family: 'Fredoka One', cursive;
-    }
+    #beerpong h2 { font-size:3em; color:#ff66cc; text-shadow:0 0 5px rgba(255,102,204,0.5); margin-bottom:10px; font-family:'Fredoka One',cursive; }
     #beerpong .subtitle { font-size:1.3em; color:#fff; margin-bottom:40px; }
 
-    .packs-container {
-      display:flex;
-      flex-wrap:wrap;
-      justify-content:center;
-      gap:30px;
-    }
-    .pack-card {
-      background:#1a1a1a;
-      border-radius:15px;
-      width:300px;
-      box-shadow: 0 0 15px rgba(255,102,204,0.3);
-      overflow:hidden;
-      transition: transform 0.4s, box-shadow 0.4s;
-    }
+    .packs-container { display:flex; flex-wrap:wrap; justify-content:center; gap:30px; }
+    .pack-card { background:#1a1a1a; border-radius:15px; width:300px; box-shadow:0 0 15px rgba(255,102,204,0.3); overflow:hidden; transition: transform 0.4s, box-shadow 0.4s; }
     .pack-card img { width:100%; height:auto; transition: transform 0.4s; }
     .pack-card div { padding:20px; }
     .pack-card h3 { color:#ff66cc; text-shadow:0 0 5px rgba(255,102,204,0.3); }
     .pack-card p { color:#fff; font-size:0.95em; }
-
-    /* Effet hover packs */
-    .pack-card:hover {
-      transform: scale(1.05);
-      box-shadow: 0 0 30px rgba(255,102,204,0.7);
-    }
+    .pack-card:hover { transform: scale(1.05); box-shadow:0 0 30px rgba(255,102,204,0.7); }
     .pack-card:hover img { transform: scale(1.05); }
 
-    /* Section Clients */
-    .clients-section {
-      padding:60px 20px;
-      text-align:center;
-      background:#111;
-    }
-    .clients-section h2 {
-      font-size:2.5em;
-      color:#ff66cc;
-      margin-bottom:40px;
-      font-family: 'Fredoka One', cursive;
-    }
-    .client-cards {
-      display:flex;
-      flex-wrap:wrap;
-      justify-content:center;
-      gap:30px;
-    }
-    .client-card {
-      background:#1a1a1a;
-      border-radius:15px;
-      width:250px;
-      padding:20px;
-      box-shadow: 0 0 10px rgba(255,102,204,0.3);
-      transition: transform 0.4s, box-shadow 0.4s;
-    }
+    /* Clients */
+    .clients-section { padding:60px 20px; text-align:center; background:#111; }
+    .clients-section h2 { font-size:2.5em; color:#ff66cc; margin-bottom:40px; font-family:'Fredoka One',cursive; }
+    .client-cards { display:flex; flex-wrap:wrap; justify-content:center; gap:30px; }
+    .client-card { background:#1a1a1a; border-radius:15px; width:250px; padding:20px; box-shadow:0 0 10px rgba(255,102,204,0.3); transition: transform 0.4s, box-shadow 0.4s; }
     .client-card img { width:60px; height:60px; border-radius:50%; margin-bottom:15px; }
     .client-card p { font-size:0.95em; color:#fff; }
-    .client-card h4 { color:#ff66cc; margin-bottom:10px; font-family: 'Fredoka One', cursive; }
-
-    /* Effet hover clients */
-    .client-card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 0 25px rgba(255,102,204,0.6);
-    }
+    .client-card h4 { color:#ff66cc; margin-bottom:10px; font-family:'Fredoka One',cursive; }
+    .client-card:hover { transform: translateY(-10px); box-shadow:0 0 25px rgba(255,102,204,0.6); }
   </style>
 </head>
 <body>
 
-  <!-- Headboard -->
-  <header>
-    <div class="logo-container">
-      <img src="Logo.png" alt="Logo Vibra" class="logo">
-    </div>
-    <nav>
-      <a href="index.html">Accueil</a>
-      <a href="beerpong.html">Beerpong</a>
-      <a href="packs.html">Packs Soirée</a>
-      <a href="goodies.html">Goodies</a>
-    </nav>
-  </header>
-
-  <!-- Bandeau défilant -->
-  <div class="scrolling-banner">
-    <span>Vibra fond tes soirées • Vibra fond tes soirées • Vibra fond tes soirées • Vibra fond tes soirées</span>
+<header>
+  <div class="logo-container">
+    <img src="Logo.png" alt="Logo Vibra" class="logo">
   </div>
+  <nav>
+    <a href="index.html">Accueil</a>
+    <a href="beerpong.html">Beerpong</a>
+    <a href="packs.html">Packs Soirée</a>
+    <a href="goodies.html">Goodies</a>
+  </nav>
+</header>
 
-  <!-- Description Services -->
-  <div class="page-description">
-    <p>Découvrez nos services exclusifs pour vos soirées : Beer Pong, animations, et tout ce qu’il faut pour des moments mémorables entre amis. Nos packs s’adaptent à toutes vos envies et garantissent une ambiance festive et professionnelle.</p>
+<div class="scrolling-banner">
+  <span>Vibra fond tes soirées • Vibra fond tes soirées • Vibra fond tes soirées • Vibra fond tes soirées</span>
+</div>
+
+<div class="page-description">
+  <p>Plonge dans l’univers du Beer Pong et prépare-toi à des soirées mémorables entre amis. Nos packs s’adaptent à tous les niveaux et garantissent fun et ambiance !</p>
+</div>
+
+<section id="beerpong">
+  <h2>Beer Pong & Soirées</h2>
+  <p class="subtitle">Choisis ton pack et prépare-toi à passer une soirée inoubliable !</p>
+
+  <div class="packs-container">
+    <div class="pack-card">
+      <img src="https://images.pexels.com/photos/696218/pexels-photo-696218.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=400&w=600" alt="Pack Standard">
+      <div>
+        <h3>Pack Standard</h3>
+        <p>Jeu classique, verres et balles inclus. Parfait pour débuter la soirée entre amis.</p>
+      </div>
+    </div>
+    <div class="pack-card">
+      <img src="https://images.pexels.com/photos/3186657/pexels-photo-3186657.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=400&w=600" alt="Pack Premium">
+      <div>
+        <h3>Pack Premium</h3>
+        <p>Lumières, verres, balles et DJ virtuel pour une soirée complète et animée.</p>
+      </div>
+    </div>
+    <div class="pack-card">
+      <img src="https://images.pexels.com/photos/208969/pexels-photo-208969.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=400&w=600" alt="Pack VIP">
+      <div>
+        <h3>Pack VIP</h3>
+        <p>Tables lumineuses, verres spéciaux et animations fluorescentes pour une expérience ultime.</p>
+      </div>
+    </div>
   </div>
+</section>
 
-  <!-- Section Beer Pong -->
-  <section id="beerpong">
-    <h2>Beer Pong & Soirées</h2>
-    <p class="subtitle">Choisis ton pack et prépare-toi à passer une soirée mémorable !</p>
-
-    <div class="packs-container">
-      <div class="pack-card">
-        <img src="https://images.pexels.com/photos/696218/pexels-photo-696218.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=400&w=600" alt="Pack Standard">
-        <div>
-          <h3>Pack Standard</h3>
-          <p>Jeu de Beer Pong classique, verres et balles inclus. Idéal pour débuter la soirée.</p>
-        </div>
-      </div>
-
-      <div class="pack-card">
-        <img src="https://images.pexels.com/photos/3186657/pexels-photo-3186657.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=400&w=600" alt="Pack Premium">
-        <div>
-          <h3>Pack Premium</h3>
-          <p>Lumières, verres, balles et DJ virtuel inclus pour une soirée complète.</p>
-        </div>
-      </div>
-
-      <div class="pack-card">
-        <img src="https://images.pexels.com/photos/208969/pexels-photo-208969.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=400&w=600" alt="Pack VIP">
-        <div>
-          <h3>Pack VIP</h3>
-          <p>Expérience ultime : table lumineuse, verres spéciaux, balles fluorescentes et animations.</p>
-        </div>
-      </div>
+<section class="clients-section">
+  <h2>Ils nous ont fait confiance</h2>
+  <div class="client-cards">
+    <div class="client-card">
+      <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Client 1">
+      <h4>Alex M.</h4>
+      <p>Une soirée incroyable ! Le pack Premium a surpassé toutes nos attentes.</p>
     </div>
-  </section>
-
-  <!-- Section Clients -->
-  <section class="clients-section">
-    <h2>Ils nous ont fait confiance</h2>
-    <div class="client-cards">
-      <div class="client-card">
-        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Client 1">
-        <h4>Alex M.</h4>
-        <p>Une soirée incroyable ! Le pack Premium a surpassé toutes nos attentes.</p>
-      </div>
-      <div class="client-card">
-        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Client 2">
-        <h4>Sophie L.</h4>
-        <p>Ambiance festive garantie, merci à Vibra pour l'organisation parfaite !</p>
-      </div>
-      <div class="client-card">
-        <img src="https://randomuser.me/api/portraits/men/56.jpg" alt="Client 3">
-        <h4>Marc T.</h4>
-        <p>Des animations fun et professionnelles, tout le monde a adoré.</p>
-      </div>
+    <div class="client-card">
+      <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Client 2">
+      <h4>Sophie L.</h4>
+      <p>Ambiance festive garantie, merci à Vibra pour l'organisation parfaite !</p>
     </div>
-  </section>
+    <div class="client-card">
+      <img src="https://randomuser.me/api/portraits/men/56.jpg" alt="Client 3">
+      <h4>Marc T.</h4>
+      <p>Des animations fun et professionnelles, tout le monde a adoré.</p>
+    </div>
+  </div>
+</section>
 
 </body>
 </html>
