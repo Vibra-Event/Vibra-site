@@ -30,19 +30,21 @@ header {
 .bienvenue {
   font-size: 24px;
   font-weight: bold;
-  color: #b026ff; /* violet néon */
+  color: #b026ff !important; /* force la couleur violet néon */
   text-shadow: 
      0 0 5px #b026ff,
      0 0 10px #b026ff,
      0 0 20px #b026ff,
      0 0 40px #b026ff;
   animation: vague 2s infinite;
+  display: inline-block;
 }
 
-/* Animation vague */
 @keyframes vague {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-8px); }
+}
+
 }
 
 nav {
