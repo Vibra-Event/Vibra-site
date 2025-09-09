@@ -3,35 +3,100 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Beerpong - Vibra</title>
+  <title>Vibra - Beerpong</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header>
-  <div class="logo-container">
-    <img src="Logo.png" alt="Logo Vibra" class="logo">
-    <span class="bienvenue">Bienvenue</span>
-  </div>
-  <nav>
-    <a href="index.html">Accueil</a>
-    <a href="beerpong.html">Beerpong</a>
-    <a href="packs.html">Packs Soirée</a>
-    <a href="goodies.html">Goodies</a>
-  </nav>
-</header>
 
-  <section id="accueil">
-    <h1>Beerpong</h1>
-    <p>Découvrez toutes les offres et animations pour vos soirées Beerpong !</p>
-    <ul>
-      <li>Tournois de Beer Pong</li>
-      <li>Animation personnalisée</li>
-      <li>Goodies inclus</li>
+  <!-- Header identique -->
+  <header>
+    <div class="logo-container">
+      <img src="Logo.png" alt="Logo Vibra" class="logo">
+      <span class="bienvenue">Bienvenue</span>
+    </div>
+    <nav>
+      <a href="index.html">Accueil</a>
+      <a href="beerpong.html">Beerpong</a>
+      <a href="packs.html">Packs Soirée</a>
+      <a href="goodies.html">Goodies</a>
+    </nav>
+  </header>
+
+  <!-- Bandeau défilant -->
+  <div class="bandeau-defilant">
+    <p>Vibra fond tes soirées • Vibra fond tes soirées • Vibra fond tes soirées • Vibra fond tes soirées</p>
+  </div>
+
+  <!-- Section principale -->
+  <section id="beerpong-main" class="section-content">
+    <h1 class="section-title">Beerpong</h1>
+    <p class="section-text">
+      Découvrez nos soirées Beerpong légendaires ! Ambiance garantie avec musique, challenges et lots à gagner.
+    </p>
+
+    <div class="video-container">
+      <video autoplay loop muted controls>
+        <source src="Beerpong.mp4" type="video/mp4">
+        Votre navigateur ne supporte pas la vidéo.
+      </video>
+      <a href="beerpong.html" class="video-title">Beerpong</a>
+    </div>
+  </section>
+
+  <!-- Section description -->
+  <section class="section-content">
+    <h2 class="section-title">Nos offres Beerpong</h2>
+    <p class="section-text">
+      Plusieurs formules adaptées à vos envies :
+    </p>
+    <ul class="offres-list">
+      <li>Formule Solo : initiation et challenges entre amis.</li>
+      <li>Formule Équipe : tournoi complet avec récompenses.</li>
+      <li>Formule VIP : espace privatif, boissons incluses, goodies personnalisés.</li>
     </ul>
   </section>
 
+  <!-- Section galerie -->
+  <section class="section-content">
+    <h2 class="section-title">Galerie</h2>
+    <div class="galerie">
+      <img src="VIBRA.png" alt="Photo Beerpong 1" class="galerie-img">
+      <img src="VIBRA.png" alt="Photo Beerpong 2" class="galerie-img">
+      <img src="VIBRA.png" alt="Photo Beerpong 3" class="galerie-img">
+    </div>
+  </section>
+
+  <!-- Section témoignages -->
+  <section class="section-content">
+    <h2 class="section-title">Témoignages</h2>
+    <div class="temoignages">
+      <blockquote>
+        "Une soirée incroyable ! L'ambiance était dingue !" - Alex
+      </blockquote>
+      <blockquote>
+        "On a passé un moment inoubliable entre amis !" - Marine
+      </blockquote>
+      <blockquote>
+        "Organisation parfaite et super fun !" - Julien
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- Section contact rapide -->
+  <section class="section-content">
+    <h2 class="section-title">Réserver une soirée Beerpong</h2>
+    <form action="mailto:tonemail@example.com" method="post" enctype="text/plain">
+      <input type="text" placeholder="Nom" name="Nom" required><br><br>
+      <input type="email" placeholder="Email" name="Email" required><br><br>
+      <textarea placeholder="Votre message" name="Message" required></textarea><br><br>
+      <button type="submit">Envoyer</button>
+    </form>
+  </section>
+
+  <!-- Pied de page -->
   <footer>
     &copy; 2025 Vibra - Tous droits réservés
   </footer>
+
 </body>
 </html>
