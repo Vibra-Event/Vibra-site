@@ -21,7 +21,6 @@ a {
   color: inherit;
 }
 
-/* ==== HEADER ==== */
 header {
   display: flex;
   align-items: center;
@@ -36,6 +35,8 @@ header {
 
 .logo-img {
   height: 50px; /* ajuste selon ton logo */
+}
+
 }
 
 /* ==== NAVIGATION ==== */
