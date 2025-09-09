@@ -16,7 +16,7 @@ body {
 /* ================= Header ================= */
 header {
   display: flex;
-  justify-content: space-between; /* logo à gauche, nav à droite */
+  justify-content: space-between; /* desktop : logo à gauche, nav à droite */
   align-items: center;
   padding: 15px 20px;
   background: linear-gradient(90deg, #ff00ff, #00ffff);
@@ -87,7 +87,7 @@ nav a:hover {
 .bandeau-defilant p {
   display: inline-block;
   white-space: nowrap;
-  font-size: 5vw;
+  font-size: 2vw; /* desktop par défaut */
   color: #00ffff;
   font-weight: bold;
   position: absolute;
@@ -169,10 +169,10 @@ footer {
 /* ================= Responsive mobile ================= */
 @media (max-width: 600px) {
 
-  /* Header */
+  /* Header mobile */
   header {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: flex-start; /* logo + bienvenue à gauche */
     gap: 10px;
   }
 
@@ -183,7 +183,7 @@ footer {
   nav {
     width: 100%;
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* menu sous logo */
     gap: 8px;
   }
 
@@ -198,24 +198,20 @@ footer {
     font-size: 1rem;
   }
 
-  /* Image principale */
+  /* Image principale mobile */
   .vibra-img {
     width: 95%;
     max-width: none;
     margin: 15px auto;
   }
 
-  /* Bandeau défilant */
-  .bandeau-defilant {
-    padding: 8px 0;
-  }
-
+  /* Bandeau défilant mobile */
   .bandeau-defilant p {
     font-size: 6vw;
     left: 100%;
   }
 
-  /* Section vidéos */
+  /* Section vidéos mobile */
   #videos {
     padding: 10px;
     gap: 20px;
@@ -231,13 +227,13 @@ footer {
     height: auto;
   }
 
-  /* Titres vidéos */
+  /* Titres vidéos mobile */
   .video-title, h1 {
     font-size: 4vw;
     text-align: center;
   }
 
-  /* Footer */
+  /* Footer mobile */
   footer {
     font-size: 0.8rem;
     padding: 10px;
