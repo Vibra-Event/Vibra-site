@@ -1,117 +1,100 @@
-/* ================= Reset basique ================= */
+/* Reset basique */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Orbitron', Arial, sans-serif;
+  font-family: 'Arial', sans-serif;
 }
 
-/* ================= Corps de page ================= */
+/* Corps de page */
 body {
-  background-color: #0d0d0d;
+  background-color: #0d0d0d; /* fond sombre */
   color: #fff;
   line-height: 1.5;
 }
 
-/* ================= Header ================= */
+/* Header */
 header {
   display: flex;
-  flex-direction: column; /* mobile-first */
-  align-items: flex-start;
-  padding: 10px 15px;
-  background: linear-gradient(90deg, #ff00ff, #00ffff);
-  gap: 8px;
-}
-
-.logo-container {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.logo-container img.logo {
-  width: 60px; /* mobile */
-  height: auto;
-}
-
-.logo-container .bienvenue {
-  font-size: 1rem;
-  color: #fff;
-  font-weight: bold;
-}
-
-/* Navigation mobile */
-nav {
-  width: 100%;
-  display: flex;
   flex-direction: column;
-  gap: 6px;
+  align-items: center;
+  padding: 15px;
+  background: linear-gradient(90deg, #ff00ff, #00ffff);
+  text-align: center;
 }
 
-nav a {
-  width: 100%;
-  text-align: left;
-  padding: 8px;
-  font-size: 1rem;
-  font-weight: bold;
-  color: #fff;
+header nav {
+  margin-top: 10px;
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+header nav a {
   text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  padding: 8px 12px;
   border-radius: 5px;
-  background: linear-gradient(90deg, #ff00ff, #00ffff);
   transition: 0.3s;
 }
 
-nav a:hover {
+header nav a:hover {
   background-color: #ff00ff;
   color: #0d0d0d;
 }
 
-/* ================= Image principale ================= */
+/* Logo */
+.logo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo {
+  width: 100px;
+  height: auto;
+  margin-bottom: 5px;
+}
+
+/* Image principale */
 .vibra-img {
-  width: 100%; /* prend toute la largeur */
-  max-width: 100%;
+  width: 90%;
+  max-width: 500px;
+  margin: 20px auto;
   display: block;
-  margin: 10px auto;
+  border: 2px solid #ff00ff;
   border-radius: 10px;
-  transition: transform 0.3s;
 }
 
-.vibra-img:hover {
-  transform: scale(1.02);
-}
-
-/* ================= Bandeau défilant ================= */
+/* Bandeau défilant */
 .bandeau-defilant {
-  width: 100%;
-  overflow: hidden;
   background-color: #111;
-  padding: 8px 0;
-  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 10px 0;
+  margin: 20px 0;
 }
 
 .bandeau-defilant p {
   display: inline-block;
-  white-space: nowrap;
-  font-size: 5vw;
+  animation: defile 15s linear infinite;
   color: #00ffff;
   font-weight: bold;
-  position: absolute;
-  left: 100%;
-  animation: defile 15s linear infinite;
 }
 
 @keyframes defile {
-  0% { left: 100%; }
-  100% { left: -100%; }
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
 }
 
-/* ================= Section vidéos ================= */
-section {
+/* Section vidéos */
+#videos {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
-  padding: 10px;
+  gap: 25px;
+  padding: 0 10px;
 }
 
 .video-container {
@@ -124,77 +107,44 @@ section {
   width: 100%;
   border: 2px solid #ff00ff;
   border-radius: 10px;
-  transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.video-container video:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 20px #ff00ff, 0 0 40px #00ffff;
-}
-
-/* ================= Titres ================= */
-h1, .video-title {
+/* Titres vidéos */
+.video-title {
+  display: block;
+  margin-top: 8px;
   color: #00ffff;
   font-weight: bold;
-  font-size: 4vw; /* mobile-first */
-  text-align: center;
+  font-size: 1.2rem;
+  text-decoration: none;
   text-shadow: 0 0 5px #00ffff, 0 0 10px #ff00ff;
-  margin: 5px 0;
-  transition: 0.3s;
 }
 
-h1:hover, .video-title:hover {
+.video-title:hover {
   color: #ff00ff;
-  text-shadow: 0 0 10px #ff00ff, 0 0 20px #00ffff;
 }
 
-/* ================= Footer ================= */
+/* Footer */
 footer {
   text-align: center;
-  padding: 10px;
-  margin-top: 20px;
+  padding: 15px;
+  margin-top: 30px;
   border-top: 2px solid #ff00ff;
   color: #fff;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
 }
 
-/* ================= Desktop ================= */
-@media (min-width: 601px) {
-
-  /* Header desktop */
-  header {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 30px;
-  }
-
-  nav {
-    flex-direction: row;
-    gap: 15px;
-    width: auto;
-  }
-
-  nav a {
-    width: auto;
-    text-align: center;
-    padding: 8px 12px;
-    font-size: 1.1rem;
-  }
-
-  .logo-container img.logo {
-    width: 80px;
-  }
-
-  h1, .video-title {
-    font-size: 1.5rem;
-  }
-
-  .bandeau-defilant p {
-    font-size: 2vw;
+/* Responsive pour téléphones */
+@media (max-width: 600px) {
+  header nav {
+    flex-direction: column;
   }
 
   .vibra-img {
-    max-width: 500px;
+    width: 95%;
+  }
+
+  .video-container {
+    max-width: 100%;
   }
 }
