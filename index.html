@@ -4,76 +4,62 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Vibra - Soirées et Goodies</title>
-  <link rel="stylesheet" href="style.css"> <!-- ton fichier CSS -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet"> <!-- police Google Fonts -->
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-
-  <!-- HEADER -->
-<header class="header-top">
-  <div class="header-inner">
-    <!-- Logo + Bienvenue -->
-    <div class="logo-bienvenue">
+  <!-- Bandeau haut -->
+  <header>
+    <div class="logo-container">
       <img src="Logo.png" alt="Logo Vibra" class="logo">
-      <span class="bienvenue-text">
-        <span>B</span><span>i</span><span>e</span><span>n</span><span>v</span><span>e</span><span>n</span><span>u</span><span>e</span>
-      </span>
+      <span class="bienvenue">Bienvenue</span>
     </div>
-
-      <!-- Menu à droite -->
-      <nav class="main-nav">
-        <a href="#evenements">Événements</a>
-        <a href="#packs">Packs soirée</a>
-        <a href="#goodies">Goodies</a>
-      </nav>
-    </div>
+    <nav>
+      <a href="#evenements">Événements</a>
+      <a href="#packs">Packs soirée</a>
+      <a href="#goodies">Goodies</a>
+    </nav>
   </header>
 
-  <!-- Image principale VIBRA -->
+  <!-- Image principale -->
   <section id="accueil">
     <img src="VIBRA.png" alt="Image Vibra" class="vibra-img">
   </section>
 
-  <!-- Bandeau défilant -->
-  <section class="bandeau-defile">
-    <div class="marquee">
-      <span>
-        Vibra fond tes soirées ✨ Vibra fond tes soirées ✨ Vibra fond tes soirées ✨ Vibra fond tes soirées ✨ Vibra fond tes soirées ✨
-        Vibra fond tes soirées ✨ Vibra fond tes soirées ✨ Vibra fond tes soirées ✨ Vibra fond tes soirées ✨ Vibra fond tes soirées ✨
-      </span>
+  <!-- Bandeau phrase qui défile -->
+  <div class="bandeau-defilant">
+    <p>Vibra fond tes soirées • Vibra fond tes soirées • Vibra fond tes soirées • Vibra fond tes soirées • Vibra fond tes soirées</p>
+  </div>
+
+  <!-- Section vidéos -->
+  <section id="videos">
+    <div class="video-container">
+      <video autoplay loop muted>
+        <source src="Beerpong.mp4" type="video/mp4">
+        Ton navigateur ne supporte pas la vidéo.
+      </video>
+      <p>Beer Pong</p>
+    </div>
+
+    <div class="video-container">
+      <video autoplay loop muted>
+        <source src="Soiree.mp4" type="video/mp4">
+        Ton navigateur ne supporte pas la vidéo.
+      </video>
+      <p>Soirée</p>
+    </div>
+
+    <div class="video-container">
+      <video autoplay loop muted>
+        <source src="Goodies.mp4" type="video/mp4">
+        Ton navigateur ne supporte pas la vidéo.
+      </video>
+      <p>Goodies</p>
     </div>
   </section>
 
-  <!-- Sections -->
-  <section id="evenements">
-    <h2>Événements</h2>
-    <p>Soirées à thème, anniversaires, fêtes privées et plus encore !</p>
-  </section>
-
-  <section id="packs">
-    <h2>Packs soirée</h2>
-    <p>Choisissez votre pack pour une soirée clé en main.</p>
-  </section>
-
-  <section id="goodies">
-    <h2>Goodies</h2>
-    <p>Badges, bracelets, accessoires pour mettre de l'ambiance !</p>
-  </section>
-
-  <section id="contact">
-    <h2>Contact / Réservation</h2>
-    <form action="mailto:tonemail@example.com" method="post" enctype="text/plain">
-      <input type="text" placeholder="Nom" name="Nom" required><br><br>
-      <input type="email" placeholder="Email" name="Email" required><br><br>
-      <textarea placeholder="Votre message" name="Message" required></textarea><br><br>
-      <button type="submit">Envoyer</button>
-    </form>
-  </section>
-
+  <!-- Pied de page -->
   <footer>
     &copy; 2025 Vibra - Tous droits réservés
   </footer>
-
 </body>
 </html>
