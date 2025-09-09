@@ -4,45 +4,25 @@
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
-  background: #111;
+  background: #111; /* fond noir */
   color: white;
 }
 
-/* Bandeau haut */
+/* Header */
 header {
   background: black;
-  padding: 10px 20px;
   display: flex;
-  align-items: center;
   justify-content: space-between;
-}
-
-.logo-container {
-  display: flex;
   align-items: center;
+  padding: 10px 20px;
 }
 
 .logo {
   height: 60px;
 }
 
-.bienvenue {
-  font-size: 22px;
-  font-weight: bold;
-  color: #b026ff;
-  text-shadow: 0 0 10px #b026ff;
-  margin-left: 15px;
-  animation: wave 2s infinite;
-}
-
-@keyframes wave {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-5px); }
-}
-
 nav {
   display: flex;
-  align-items: center;
   gap: 15px;
 }
 
@@ -64,13 +44,6 @@ nav a:hover {
   text-shadow: 0 0 20px #b026ff;
 }
 
-/* Petit logo maison */
-.home-logo {
-  height: 40px;
-  margin-left: 15px;
-  cursor: pointer;
-}
-
 /* Image principale */
 .vibra-img {
   display: block;
@@ -81,7 +54,6 @@ nav a:hover {
 /* Bandeau défilant */
 .bandeau-defilant {
   background: black;
-  color: #b026ff;
   overflow: hidden;
   white-space: nowrap;
   padding: 10px 0;
@@ -95,6 +67,7 @@ nav a:hover {
   animation: defilement 15s linear infinite;
   font-size: 20px;
   font-weight: bold;
+  color: #b026ff;
   text-shadow: 0 0 10px #b026ff;
 }
 
@@ -118,6 +91,8 @@ nav a:hover {
 
 .video-container video {
   border-radius: 15px;
+  width: 250px;
+  height: 250px;
   object-fit: cover;
   transition: transform 0.3s, box-shadow 0.3s;
 }
@@ -127,25 +102,23 @@ nav a:hover {
   box-shadow: 0 0 25px rgba(176, 38, 255, 1);
 }
 
-/* Boutons sous vidéos */
-.video-button {
-  display: block; /* en dessous de la video */
-  margin: 10px auto 0 auto;
-  padding: 10px 20px;
-  background-color: #111;
+/* Titre des vidéos en dessous */
+.video-title {
+  display: block;
+  margin-top: 10px;
   color: #b026ff;
   font-weight: bold;
   font-size: 16px;
   text-decoration: none;
   border: 2px solid #b026ff;
   border-radius: 12px;
+  padding: 6px 12px;
   text-align: center;
-  text-shadow: 0 0 8px #b026ff;
-  width: 120px;
+  text-shadow: 0 0 10px #b026ff;
   transition: 0.3s;
 }
 
-.video-button:hover {
+.video-title:hover {
   color: white;
   border-color: white;
   text-shadow: 0 0 20px #b026ff;
@@ -159,35 +132,3 @@ footer {
   font-size: 14px;
   color: gray;
 }
-/* Fond noir général pour toutes les pages */
-body {
-  margin: 0;
-  font-family: 'Poppins', sans-serif;
-  background: #111; /* Fond noir */
-  color: white;
-}
-
-/* Titres des vidéos en dessous et style néon identique au menu */
-.video-button {
-  display: block; /* en dessous de la video */
-  margin: 10px auto 0 auto;
-  padding: 10px 20px;
-  background-color: #111;
-  color: #b026ff;
-  font-weight: bold;
-  font-size: 16px;
-  text-decoration: none;
-  border: 2px solid #b026ff;
-  border-radius: 12px;
-  text-align: center;
-  text-shadow: 0 0 8px #b026ff;
-  width: 120px;
-  transition: 0.3s;
-}
-
-.video-button:hover {
-  color: white;
-  border-color: white;
-  text-shadow: 0 0 20px #b026ff;
-}
-
