@@ -5,133 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Vibra - Accueil</title>
   <link rel="stylesheet" href="style.css">
-  <style>
-    /* ==== Styles généraux === */
-    body {
-      margin: 0;
-      font-family: 'Arial', sans-serif;
-      background: #0a0a0a;
-      color: #fff;
-      overflow-x: hidden;
-    }
-
-    header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 10px 20px;
-      background: #111;
-      position: relative;
-    }
-
-    .logo {
-      display: flex;
-      align-items: center;
-      font-size: 24px;
-      font-weight: bold;
-      color: #ff0080;
-    }
-
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      margin-left: 20px;
-      font-weight: bold;
-      transition: 0.3s;
-    }
-
-    nav a:hover {
-      color: #ff0080;
-    }
-
-    /* ==== Bande qui défile ==== */
-    .marquee-container {
-      width: 100%;
-      overflow: hidden;
-      background: #222;
-      border-top: 2px solid #ff0080;
-      border-bottom: 2px solid #ff0080;
-    }
-
-    .marquee {
-      display: inline-block;
-      white-space: nowrap;
-      padding: 10px 0;
-      animation: marquee 15s linear infinite;
-    }
-
-    @keyframes marquee {
-      0% { transform: translateX(100%); }
-      100% { transform: translateX(-100%); }
-    }
-
-    /* ==== Section Bienvenue ==== */
-    .welcome-section {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: 80vh;
-      text-align: center;
-      background: linear-gradient(135deg, #ff0080, #7928ca);
-    }
-
-    .welcome-section h1 {
-      font-size: 48px;
-      margin: 0;
-      color: #fff;
-      animation: fadeInUp 2s ease forwards;
-      opacity: 0;
-    }
-
-    .welcome-section p {
-      font-size: 20px;
-      margin-top: 20px;
-      color: #fff;
-      animation: fadeInUp 2.5s ease forwards;
-      opacity: 0;
-    }
-
-    @keyframes fadeInUp {
-      0% { transform: translateY(50px); opacity: 0; }
-      100% { transform: translateY(0); opacity: 1; }
-    }
-
-    /* ==== Boutons ==== */
-    .btn {
-      margin-top: 30px;
-      padding: 12px 30px;
-      font-size: 18px;
-      font-weight: bold;
-      color: #fff;
-      background: #ff0080;
-      border: none;
-      border-radius: 25px;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-
-    .btn:hover {
-      background: #ff3399;
-    }
-  </style>
 </head>
 <body>
 
-<!-- HEADER -->
-<header>
-  <div class="logo">
-    <img src="chemin/vers/logo.png" alt="Vibra Logo" style="height:50px; margin-right:10px;">
-    Vibra
-  </div>
-  <nav>
-    <a href="index.html">Accueil</a>
-    <a href="goodies.html">Goodies</a>
-    <a href="packs.html">Événements</a>
-    <a href="beerpong.html">Beer Pong</a>
-  </nav>
-</header>
-
+  <!-- HEADER -->
+  <header>
+    <div class="logo-container">
+      <img src="chemin/vers/logo.png" alt="Vibra Logo" class="logo-img">
+    </div>
+    <nav>
+      <a href="index.html">Accueil</a>
+      <a href="goodies.html">Goodies</a>
+      <a href="evenements.html">Événements</a>
+      <a href="beerpong.html">Beer Pong</a>
+    </nav>
+  </header>
 
   <!-- BANDE QUI DÉFILE -->
   <div class="marquee-container">
@@ -144,13 +32,11 @@
   <section class="welcome-section">
     <h1>Bienvenue sur Vibra</h1>
     <p>Goodies 🎁 – Événements 🎈 – Beer Pong 🍻 | Valence – Soirées BDE, bars & boîtes</p>
-    <button class="btn">Découvrir</button>
+    <!-- Le bouton ouvre goodies.html dans le même onglet -->
+    <a href="goodies.html" class="btn">Découvrir</a>
+    <!-- Si tu veux ouvrir dans un nouvel onglet, ajoute target="_blank" -->
+    <!-- <a href="goodies.html" class="btn" target="_blank">Découvrir</a> -->
   </section>
-
-  <script>
-    // Exemple d'animation JS si besoin pour plus tard
-    // Ici tout est géré en CSS mais on peut ajouter du JS pour scroll ou interactions
-  </script>
 
 </body>
 </html>
