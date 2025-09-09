@@ -3,14 +3,44 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Beerpong - Vibra</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Vibra - Goodies</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body { margin:0; font-family:'Roboto', sans-serif; background:#0f0f0f; color:#fff; }
+
+    header {
+      background:#111; padding:20px 40px; display:flex; justify-content:space-between; align-items:center; box-shadow:0 2px 10px rgba(255,0,255,0.2);
+    }
+    .logo-container { display:flex; align-items:center; gap:10px; }
+    .logo-container img.logo { height:50px; }
+    nav a { color:#fff; margin-left:20px; text-decoration:none; font-weight:bold; transition:0.3s; }
+    nav a:hover { color:#ff66cc; }
+
+    .scrolling-banner { background:#222; color:#fff; overflow:hidden; white-space:nowrap; box-shadow:0 2px 10px rgba(255,0,255,0.2); padding:10px 0; }
+    .scrolling-banner span { display:inline-block; padding-left:100%; animation:scroll 20s linear infinite; }
+    @keyframes scroll { 0% { transform:translateX(0%);} 100% { transform:translateX(-100%);} }
+
+    .page-description { text-align:center; padding:40px 20px; font-size:1.2em; max-width:900px; margin:0 auto 50px auto; color:#fff; }
+
+    #goodies { padding:60px 20px; text-align:center; }
+    #goodies h2 { font-size:3em; color:#ff66cc; text-shadow:0 0 5px rgba(255,102,204,0.5); margin-bottom:10px; font-family:'Fredoka One', cursive; }
+    #goodies .subtitle { font-size:1.3em; color:#fff; margin-bottom:40px; }
+
+    .goodies-container { display:flex; flex-wrap:wrap; justify-content:center; gap:30px; }
+    .goodie-card { background:#1a1a1a; border-radius:15px; width:250px; box-shadow:0 0 15px rgba(255,102,204,0.3); overflow:hidden; transition: transform 0.4s, box-shadow 0.4s; }
+    .goodie-card img { width:100%; height:auto; transition: transform 0.4s; }
+    .goodie-card div { padding:20px; }
+    .goodie-card h3 { color:#ff66cc; text-shadow:0 0 5px rgba(255,102,204,0.3); }
+    .goodie-card p { color:#fff; font-size:0.95em; }
+    .goodie-card:hover { transform: scale(1.05); box-shadow:0 0 30px rgba(255,102,204,0.7); }
+    .goodie-card:hover img { transform: scale(1.05); }
+  </style>
 </head>
 <body>
- <header>
+
+<header>
   <div class="logo-container">
     <img src="Logo.png" alt="Logo Vibra" class="logo">
-    <span class="bienvenue">Bienvenue</span>
   </div>
   <nav>
     <a href="index.html">Accueil</a>
@@ -20,19 +50,44 @@
   </nav>
 </header>
 
+<div class="scrolling-banner">
+  <span>Vibra fond tes soirées • Vibra fond tes soirées • Vibra fond tes soirées • Vibra fond tes soirées</span>
+</div>
 
-  <section id="accueil">
-    <h1>Goodies</h1>
-    <p>Découvrez toutes les offres disponibles pour vos soirées !</p>
-    <ul>
-      <li>Objets personnalisées</li>
-      <li>Vêtements personnalisée</li>
-      <li>Goodies</li>
-    </ul>
-  </section>
+<div class="page-description">
+  <p>Découvrez nos goodies exclusifs pour vos soirées : accessoires, t-shirts, verres personnalisés et tout ce qu’il faut pour mettre le feu à vos événements.</p>
+</div>
 
-  <footer>
-    &copy; 2025 Vibra - Tous droits réservés
-  </footer>
+<section id="goodies">
+  <h2>Goodies</h2>
+  <p class="subtitle">Choisis tes goodies et démarque-toi !</p>
+
+  <div class="goodies-container">
+    <div class="goodie-card">
+      <img src="https://images.pexels.com/photos/6347913/pexels-photo-6347913.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=400&w=600" alt="T-shirt Vibra">
+      <div>
+        <h3>T-shirt Vibra</h3>
+        <p>T-shirts colorés et fun pour vos soirées entre amis.</p>
+      </div>
+    </div>
+
+    <div class="goodie-card">
+      <img src="https://images.pexels.com/photos/1109197/pexels-photo-1109197.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=400&w=600" alt="Verres personnalisés">
+      <div>
+        <h3>Verres personnalisés</h3>
+        <p>Verres fun pour vos jeux et animations de soirée.</p>
+      </div>
+    </div>
+
+    <div class="goodie-card">
+      <img src="https://images.pexels.com/photos/6287565/pexels-photo-6287565.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=400&w=600" alt="Accessoires lumineux">
+      <div>
+        <h3>Accessoires lumineux</h3>
+        <p>Bracelets, balles et autres accessoires fluorescents pour ambiancer vos soirées.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 </body>
 </html>
