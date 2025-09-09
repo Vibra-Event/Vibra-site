@@ -19,7 +19,24 @@
     @keyframes defilement { 0% { transform:translateX(0); } 100% { transform:translateX(-100%); } }
 
     section { background:#111; padding:60px 20px; text-align:center; }
-    section h2 { color:#b026ff; font-weight:700; font-size:2.8em; border:3px solid #b026ff; border-radius:12px; padding:10px 20px; display:inline-block; margin-bottom:30px; text-shadow:0 0 10px #b026ff; }
+   /* Titres principaux uniformisés et centrés */
+section {
+  text-align: center; /* centre tout le contenu de la section */
+}
+
+section h2 {
+  color: #b026ff;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 2.8em;
+  border: 3px solid #b026ff;
+  border-radius: 12px;
+  padding: 12px 20px;
+  margin: 30px auto;
+  text-shadow: 0 0 10px #b026ff;
+  display: inline-block; /* encadré ajusté au texte */
+}
+
     section p { font-size:1.2em; margin-bottom:40px; color:white; }
 
     .goodies-container { display:flex; flex-wrap:wrap; justify-content:center; gap:30px; }
