@@ -1,6 +1,7 @@
-/* Style général */
+/* Import police Poppins */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
+/* Style général */
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
@@ -51,12 +52,16 @@ nav a {
   font-weight: bold;
   font-size: 18px;
   text-shadow: 0 0 10px #b026ff;
+  padding: 8px 15px;
+  border: 2px solid #b026ff;
+  border-radius: 12px;
   transition: 0.3s;
 }
 
 nav a:hover {
   color: white;
   text-shadow: 0 0 20px #b026ff;
+  border-color: white;
 }
 
 /* Image principale */
