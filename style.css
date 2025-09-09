@@ -68,7 +68,7 @@ nav a:hover {
 
 /* ================= Image principale ================= */
 .vibra-img {
-  width: 100%; /* prend toute la largeur de l'écran */
+  width: 100%; /* prend toute la largeur */
   max-width: 100%;
   display: block;
   margin: 10px auto;
