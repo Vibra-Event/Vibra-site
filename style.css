@@ -87,6 +87,9 @@ nav a:hover {
 
 .video-container {
   text-align: center;
+  display: flex;
+  flex-direction: column; /* clé pour que le titre soit en dessous */
+  align-items: center;
 }
 
 .video-container video {
@@ -104,8 +107,7 @@ nav a:hover {
 
 /* Titre des vidéos en dessous */
 .video-title {
-  display: block;
-  margin-top: 10px;
+  margin-top: 10px; /* bien en dessous */
   color: #b026ff;
   font-weight: bold;
   font-size: 16px;
