@@ -45,6 +45,7 @@ header {
   50% { transform: translateY(-8px); }
 }
 
+/* Menu en haut à droite */
 nav {
   display: flex;
   gap: 15px;
