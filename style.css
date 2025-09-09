@@ -159,3 +159,35 @@ footer {
   font-size: 14px;
   color: gray;
 }
+/* Fond noir général pour toutes les pages */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #111; /* Fond noir */
+  color: white;
+}
+
+/* Titres des vidéos en dessous et style néon identique au menu */
+.video-button {
+  display: block; /* en dessous de la video */
+  margin: 10px auto 0 auto;
+  padding: 10px 20px;
+  background-color: #111;
+  color: #b026ff;
+  font-weight: bold;
+  font-size: 16px;
+  text-decoration: none;
+  border: 2px solid #b026ff;
+  border-radius: 12px;
+  text-align: center;
+  text-shadow: 0 0 8px #b026ff;
+  width: 120px;
+  transition: 0.3s;
+}
+
+.video-button:hover {
+  color: white;
+  border-color: white;
+  text-shadow: 0 0 20px #b026ff;
+}
+
