@@ -26,15 +26,20 @@ header {
   height: 60px;
 }
 
-/* Bienvenue animée en vague */
+/* Bienvenue animée en vague néon */
 .bienvenue {
-  font-size: 20px;
+  font-size: 24px;
   font-weight: bold;
-  color: #b026ff;
-  text-shadow: 0 0 10px #b026ff;
+  color: #b026ff; /* violet néon */
+  text-shadow: 
+     0 0 5px #b026ff,
+     0 0 10px #b026ff,
+     0 0 20px #b026ff,
+     0 0 40px #b026ff;
   animation: vague 2s infinite;
 }
 
+/* Animation vague */
 @keyframes vague {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-8px); }
