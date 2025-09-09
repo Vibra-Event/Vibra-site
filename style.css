@@ -26,6 +26,7 @@ header {
   height: 60px;
 }
 
+/* Bienvenue animée en vague */
 .bienvenue {
   font-size: 20px;
   font-weight: bold;
@@ -34,7 +35,6 @@ header {
   animation: vague 2s infinite;
 }
 
-/* Animation vague */
 @keyframes vague {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-8px); }
