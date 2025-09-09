@@ -34,69 +34,144 @@
       Découvrez nos soirées Beerpong légendaires ! Ambiance garantie avec musique, challenges et lots à gagner.
     </p>
 
-    <div class="video-container">
-      <video autoplay loop muted controls>
-        <source src="Beerpong.mp4" type="video/mp4">
-        Votre navigateur ne supporte pas la vidéo.
-      </video>
-      <a href="beerpong.html" class="video-title">Beerpong</a>
+  <!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vibra - Beer Pong & Soirées</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    /* Headboard existante */
+    body {
+      margin:0;
+      font-family: 'Roboto', sans-serif;
+      background-color:#0a0a0a;
+      color:#fff;
+    }
+    header {
+      background: #111;
+      padding: 20px 40px;
+      display:flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 0 20px #ff00ff;
+    }
+    header h1 {
+      color:#ff00ff;
+      text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff;
+      margin:0;
+    }
+    nav a {
+      color:#fff;
+      margin-left:20px;
+      text-decoration:none;
+      font-weight:bold;
+      transition: 0.3s;
+    }
+    nav a:hover {
+      color:#ff00ff;
+      text-shadow: 0 0 10px #ff00ff;
+    }
+
+    /* Section Beer Pong */
+    #beerpong {
+      padding:60px 20px;
+      text-align:center;
+    }
+    #beerpong h2 {
+      font-size:3em;
+      color:#ff00ff;
+      text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff, 0 0 30px #ff00ff;
+      margin-bottom:10px;
+    }
+    #beerpong p {
+      font-size:1.2em;
+      color:#fff;
+      text-shadow:0 0 5px #00ffff;
+      margin-bottom:50px;
+    }
+    .packs-container {
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:center;
+      gap:30px;
+    }
+    .pack-card {
+      background:#111;
+      border-radius:15px;
+      width:300px;
+      box-shadow: 0 0 20px #ff00ff;
+      overflow:hidden;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .pack-card img {
+      width:100%;
+      height:auto;
+    }
+    .pack-card div {
+      padding:20px;
+    }
+    .pack-card h3 {
+      color:#ff00ff;
+      text-shadow:0 0 10px #ff00ff;
+    }
+    .pack-card p {
+      color:#fff;
+      text-shadow:0 0 5px #00ffff;
+    }
+    .pack-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 30px #ff00ff, 0 0 50px #00ffff;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Headboard existante -->
+  <header>
+    <h1>VIBRA</h1>
+    <nav>
+      <a href="#home">Accueil</a>
+      <a href="#beerpong">Beer Pong</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Section Beer Pong -->
+  <section id="beerpong">
+    <h2>Beer Pong & Soirées</h2>
+    <p>Découvrez nos packs soirée pour des moments inoubliables entre amis !</p>
+
+    <div class="packs-container">
+      <!-- Pack 1 -->
+      <div class="pack-card">
+        <img src="https://images.pexels.com/photos/696218/pexels-photo-696218.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=400&w=600" alt="Pack Standard">
+        <div>
+          <h3>Pack Standard</h3>
+          <p>Jeu de Beer Pong classique, verres et balles inclus. Idéal pour débuter la soirée.</p>
+        </div>
+      </div>
+
+      <!-- Pack 2 -->
+      <div class="pack-card">
+        <img src="https://images.pexels.com/photos/1161495/pexels-photo-1161495.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=400&w=600" alt="Pack Premium">
+        <div>
+          <h3>Pack Premium</h3>
+          <p>Lumières néon, verres, balles et DJ virtuel inclus pour une soirée complète.</p>
+        </div>
+      </div>
+
+      <!-- Pack 3 -->
+      <div class="pack-card">
+        <img src="https://images.pexels.com/photos/208969/pexels-photo-208969.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=400&w=600" alt="Pack VIP">
+        <div>
+          <h3>Pack VIP</h3>
+          <p>Expérience ultime : table lumineuse, verres spéciaux, balles fluorescentes et animations néon.</p>
+        </div>
+      </div>
     </div>
   </section>
-
-  <!-- Section description -->
-  <section class="section-content">
-    <h2 class="section-title">Nos offres Beerpong</h2>
-    <p class="section-text">
-      Plusieurs formules adaptées à vos envies :
-    </p>
-    <ul class="offres-list">
-      <li>Formule Solo : initiation et challenges entre amis.</li>
-      <li>Formule Équipe : tournoi complet avec récompenses.</li>
-      <li>Formule VIP : espace privatif, boissons incluses, goodies personnalisés.</li>
-    </ul>
-  </section>
-
-  <!-- Section galerie -->
-  <section class="section-content">
-    <h2 class="section-title">Galerie</h2>
-    <div class="galerie">
-      <img src="VIBRA.png" alt="Photo Beerpong 1" class="galerie-img">
-      <img src="VIBRA.png" alt="Photo Beerpong 2" class="galerie-img">
-      <img src="VIBRA.png" alt="Photo Beerpong 3" class="galerie-img">
-    </div>
-  </section>
-
-  <!-- Section témoignages -->
-  <section class="section-content">
-    <h2 class="section-title">Témoignages</h2>
-    <div class="temoignages">
-      <blockquote>
-        "Une soirée incroyable ! L'ambiance était dingue !" - Alex
-      </blockquote>
-      <blockquote>
-        "On a passé un moment inoubliable entre amis !" - Marine
-      </blockquote>
-      <blockquote>
-        "Organisation parfaite et super fun !" - Julien
-      </blockquote>
-    </div>
-  </section>
-
-  <!-- Section contact rapide -->
-  <section class="section-content">
-    <h2 class="section-title">Réserver une soirée Beerpong</h2>
-    <form action="mailto:tonemail@example.com" method="post" enctype="text/plain">
-      <input type="text" placeholder="Nom" name="Nom" required><br><br>
-      <input type="email" placeholder="Email" name="Email" required><br><br>
-      <textarea placeholder="Votre message" name="Message" required></textarea><br><br>
-      <button type="submit">Envoyer</button>
-    </form>
-  </section>
-
-  <!-- Pied de page -->
-  <footer>
-    &copy; 2025 Vibra - Tous droits réservés
-  </footer>
 
 </body>
 </html>
