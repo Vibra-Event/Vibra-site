@@ -1,15 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 /* ================= Reset basique ================= */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Arial', sans-serif;
+  font-family: 'Orbitron', Arial, sans-serif;
 }
 
 /* ================= Corps de page ================= */
 body {
-  background-color: #0d0d0d; /* fond sombre */
+  background-color: #0d0d0d;
   color: #fff;
   line-height: 1.5;
 }
@@ -17,21 +16,37 @@ body {
 /* ================= Header ================= */
 header {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between; /* logo à gauche, nav à droite */
   align-items: center;
-  padding: 15px;
+  padding: 15px 20px;
   background: linear-gradient(90deg, #ff00ff, #00ffff);
-  text-align: center;
-}
-
-header nav {
-  margin-top: 10px;
-  display: flex;
-  gap: 15px;
   flex-wrap: wrap;
 }
 
-header nav a {
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-container img.logo {
+  width: 80px;
+  height: auto;
+}
+
+.logo-container .bienvenue {
+  font-size: 1rem;
+  color: #fff;
+  font-weight: bold;
+}
+
+/* Navigation desktop */
+nav {
+  display: flex;
+  gap: 15px;
+}
+
+nav a {
   text-decoration: none;
   color: #fff;
   font-weight: bold;
@@ -40,22 +55,9 @@ header nav a {
   transition: 0.3s;
 }
 
-header nav a:hover {
+nav a:hover {
   background-color: #ff00ff;
   color: #0d0d0d;
-}
-
-/* ================= Logo ================= */
-.logo-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.logo {
-  width: 100px;
-  height: auto;
-  margin-bottom: 5px;
 }
 
 /* ================= Image principale ================= */
@@ -75,23 +77,27 @@ header nav a:hover {
 
 /* ================= Bandeau défilant ================= */
 .bandeau-defilant {
-  background-color: #111;
+  width: 100%;
   overflow: hidden;
-  white-space: nowrap;
+  background-color: #111;
   padding: 10px 0;
-  margin: 20px 0;
+  position: relative;
 }
 
 .bandeau-defilant p {
   display: inline-block;
-  animation: defile 15s linear infinite;
+  white-space: nowrap;
+  font-size: 5vw;
   color: #00ffff;
   font-weight: bold;
+  position: absolute;
+  left: 100%;
+  animation: defile 15s linear infinite;
 }
 
 @keyframes defile {
-  0% { transform: translateX(100%); }
-  100% { transform: translateX(-100%); }
+  0% { left: 100%; }
+  100% { left: -100%; }
 }
 
 /* ================= Section vidéos ================= */
@@ -160,30 +166,36 @@ footer {
   font-size: 0.9rem;
 }
 
-/* ================= Responsive pour téléphones ================= */
+/* ================= Responsive mobile ================= */
 @media (max-width: 600px) {
 
   /* Header */
   header {
-    padding: 10px;
-  }
-
-  header .logo-container {
     flex-direction: column;
-    align-items: center;
-  }
-
-  header nav {
-    flex-direction: column; /* menu vertical */
+    align-items: flex-start;
     gap: 10px;
-    margin-top: 10px;
   }
 
-  header nav a {
+  .logo-container {
+    gap: 8px;
+  }
+
+  nav {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  nav a {
+    width: 100%;
+    text-align: left;
     padding: 10px;
     font-size: 1rem;
-    width: 90%;
-    text-align: center;
+  }
+
+  .logo-container .bienvenue {
+    font-size: 1rem;
   }
 
   /* Image principale */
@@ -199,7 +211,7 @@ footer {
   }
 
   .bandeau-defilant p {
-    font-size: 6vw; /* taille relative à l'écran */
+    font-size: 6vw;
     left: 100%;
   }
 
@@ -231,4 +243,3 @@ footer {
     padding: 10px;
   }
 }
-
