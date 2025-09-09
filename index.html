@@ -5,59 +5,148 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Vibra - Accueil</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    /* ==== Styles généraux === */
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background: #0a0a0a;
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 20px;
+      background: #111;
+      position: relative;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      font-size: 24px;
+      font-weight: bold;
+      color: #ff0080;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #ff0080;
+    }
+
+    /* ==== Bande qui défile ==== */
+    .marquee-container {
+      width: 100%;
+      overflow: hidden;
+      background: #222;
+      border-top: 2px solid #ff0080;
+      border-bottom: 2px solid #ff0080;
+    }
+
+    .marquee {
+      display: inline-block;
+      white-space: nowrap;
+      padding: 10px 0;
+      animation: marquee 15s linear infinite;
+    }
+
+    @keyframes marquee {
+      0% { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
+    }
+
+    /* ==== Section Bienvenue ==== */
+    .welcome-section {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 80vh;
+      text-align: center;
+      background: linear-gradient(135deg, #ff0080, #7928ca);
+    }
+
+    .welcome-section h1 {
+      font-size: 48px;
+      margin: 0;
+      color: #fff;
+      animation: fadeInUp 2s ease forwards;
+      opacity: 0;
+    }
+
+    .welcome-section p {
+      font-size: 20px;
+      margin-top: 20px;
+      color: #fff;
+      animation: fadeInUp 2.5s ease forwards;
+      opacity: 0;
+    }
+
+    @keyframes fadeInUp {
+      0% { transform: translateY(50px); opacity: 0; }
+      100% { transform: translateY(0); opacity: 1; }
+    }
+
+    /* ==== Boutons ==== */
+    .btn {
+      margin-top: 30px;
+      padding: 12px 30px;
+      font-size: 18px;
+      font-weight: bold;
+      color: #fff;
+      background: #ff0080;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #ff3399;
+    }
+  </style>
 </head>
 <body>
 
-<header>
-  <div class="logo-container">
-    <img src="Logo.png" alt="Logo Vibra" class="logo">
-    <span class="bienvenue">Bienvenue</span>
-  </div>
-  <nav>
-    <a href="index.html">Accueil</a>
-    <a href="beerpong.html">Beerpong</a>
-    <a href="packs.html">Packs Soirée</a>
-    <a href="goodies.html">Goodies</a>
-  </nav>
-</header>
+  <!-- HEADER -->
+  <header>
+    <div class="logo">Vibra</div>
+    <nav>
+      <a href="index.html">Accueil</a>
+      <a href="goodies.html">Goodies</a>
+      <a href="evenements.html">Événements</a>
+      <a href="beerpong.html">Beer Pong</a>
+    </nav>
+  </header>
 
-<section id="accueil">
-  <img src="VIBRA.png" alt="Vibra" class="vibra-img">
-</section>
-
-<div class="bandeau-defilant">
-  <p>Vibra fond tes soirées • Vibra fond tes soirées • Vibra fond tes soirées • Vibra fond tes soirées</p>
-</div>
-
-<section id="videos">
-  <div class="video-container">
-    <video autoplay loop muted controls>
-      <source src="Beerpong.mp4" type="video/mp4">
-      Votre navigateur ne supporte pas la vidéo.
-    </video>
-    <a href="beerpong.html" class="video-title">Beerpong</a>
+  <!-- BANDE QUI DÉFILE -->
+  <div class="marquee-container">
+    <div class="marquee">
+      Bienvenue sur Vibra – Goodies personnalisés, Événements clé en main et Beer Pong épique à Valence !
+    </div>
   </div>
 
-  <div class="video-container">
-    <video autoplay loop muted controls>
-      <source src="Soiree.mp4" type="video/mp4">
-      Votre navigateur ne supporte pas la vidéo.
-    </video>
-    <a href="packs.html" class="video-title">Packs Soirée</a>
-  </div>
+  <!-- SECTION BIENVENUE -->
+  <section class="welcome-section">
+    <h1>Bienvenue sur Vibra</h1>
+    <p>Goodies 🎁 – Événements 🎈 – Beer Pong 🍻 | Valence – Soirées BDE, bars & boîtes</p>
+    <button class="btn">Découvrir</button>
+  </section>
 
-  <div class="video-container">
-    <video autoplay loop muted controls>
-      <source src="goodies.mp4" type="video/mp4">
-      Votre navigateur ne supporte pas la vidéo.
-    </video>
-    <a href="goodies.html" class="video-title">Goodies</a>
-  </div>
-</section>
-
-<footer>
-  &copy; 2025 Vibra - Tous droits réservés
-</footer>
+  <script>
+    // Exemple d'animation JS si besoin pour plus tard
+    // Ici tout est géré en CSS mais on peut ajouter du JS pour scroll ou interactions
+  </script>
 
 </body>
 </html>
