@@ -1,7 +1,6 @@
 /* Import police Poppins */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
-/* Style général */
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
@@ -119,12 +118,27 @@ nav a:hover {
   box-shadow: 0 0 25px rgba(176, 38, 255, 1);
 }
 
-.video-container p {
-  margin-top: 8px;
-  font-size: 16px;
-  font-weight: bold;
+/* Boutons sous vidéos */
+.video-button {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #111;
   color: #b026ff;
+  font-weight: bold;
+  font-size: 16px;
+  text-decoration: none;
+  border: 2px solid #b026ff;
+  border-radius: 12px;
+  text-align: center;
   text-shadow: 0 0 8px #b026ff;
+  transition: 0.3s;
+}
+
+.video-button:hover {
+  color: white;
+  border-color: white;
+  text-shadow: 0 0 20px #b026ff;
 }
 
 /* Pied de page */
