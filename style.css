@@ -16,7 +16,7 @@ body {
 /* ================= Header ================= */
 header {
   display: flex;
-  justify-content: space-between; /* desktop : logo à gauche, nav à droite */
+  justify-content: space-between; /* logo à gauche, nav à droite */
   align-items: center;
   padding: 15px 20px;
   background: linear-gradient(90deg, #ff00ff, #00ffff);
@@ -52,7 +52,9 @@ nav a {
   font-weight: bold;
   padding: 8px 12px;
   border-radius: 5px;
+  background: linear-gradient(90deg, #ff00ff, #00ffff);
   transition: 0.3s;
+  text-align: center;
 }
 
 nav a:hover {
@@ -62,17 +64,16 @@ nav a:hover {
 
 /* ================= Image principale ================= */
 .vibra-img {
-  width: 90%;
-  max-width: 500px;
-  margin: 20px auto;
+  width: 100%; /* prend toute la largeur de l'écran */
+  max-width: 100%;
   display: block;
-  border: 2px solid #ff00ff;
+  margin: 0 auto;
   border-radius: 10px;
   transition: transform 0.3s;
 }
 
 .vibra-img:hover {
-  transform: scale(1.05);
+  transform: scale(1.02);
 }
 
 /* ================= Bandeau défilant ================= */
@@ -87,7 +88,7 @@ nav a:hover {
 .bandeau-defilant p {
   display: inline-block;
   white-space: nowrap;
-  font-size: 2vw; /* desktop par défaut */
+  font-size: 2vw;
   color: #00ffff;
   font-weight: bold;
   position: absolute;
@@ -189,7 +190,7 @@ footer {
 
   nav a {
     width: 100%;
-    text-align: left;
+    text-align: left; /* alignement identique sur toutes les pages */
     padding: 10px;
     font-size: 1rem;
   }
@@ -200,9 +201,9 @@ footer {
 
   /* Image principale mobile */
   .vibra-img {
-    width: 95%;
-    max-width: none;
-    margin: 15px auto;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
   }
 
   /* Bandeau défilant mobile */
